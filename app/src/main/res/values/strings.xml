@@ -1,3 +1,13 @@
 <resources>
+    <!--  sign  -->
     <string name="app_name">danii_side</string>
+    <string name="sign_in_title">Welcome to daninii</string>
+    <string name="sign_id_label">ID</string>
+    <string name="sign_id_hint">아이디를 입력하세요.</string>
+    <string name="sign_pw_label">Password</string>
+    <string name="sign_pw_hint">비밀번호를 입력하세요.</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="sign_mbti_label">MBTI</string>
+    <string name="sign_mbti_hint">MBTI를 입력하세요.</string>
 </resources>
