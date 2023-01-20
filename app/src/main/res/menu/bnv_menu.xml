@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_home" app:showAsAction="ifRoom" android:enabled="true"
+        android:icon="@drawable/ic_home_white" android:title="home" />
+    <item android:id="@+id/menu_gallery" app:showAsAction="ifRoom" android:enabled="true"
+        android:icon="@drawable/ic_photo_white" android:title="gallery" />
+    <item android:id="@+id/menu_search" app:showAsAction="ifRoom" android:enabled="true"
+        android:icon="@drawable/ic_search_white" android:title="serach" />
+
+</menu>
