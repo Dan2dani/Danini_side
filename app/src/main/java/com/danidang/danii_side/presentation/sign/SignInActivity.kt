@@ -1,8 +1,10 @@
-package com.danidang.danii_side
+package com.danidang.danii_side.presentation.sign
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import com.danidang.danii_side.presentation.home.HomeActivity
+import com.danidang.danii_side.R
 import com.danidang.danii_side.databinding.ActivitySignInBinding
 import com.danidang.danii_side.util.binding.BindingActivity
 

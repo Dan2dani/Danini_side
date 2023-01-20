@@ -1,4 +1,4 @@
-package com.danidang.danii_side
+package com.danidang.danii_side.presentation.sign
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
