@@ -10,4 +10,11 @@
     <string name="sign_up">SIGN UP</string>
     <string name="sign_mbti_label">MBTI</string>
     <string name="sign_mbti_hint">MBTI를 입력하세요.</string>
+
+    <!--  home  -->
+    <string name="home_name">이름: 이다은</string>
+    <string name="home_mbti">MBTI: INTJ</string>
+    <string name="home_github_btn">MY GITHUB</string>
+    <string name="home_name_label">이름: %s</string>
+    <string name="home_mbti_label">mbti: %s</string>
 </resources>
