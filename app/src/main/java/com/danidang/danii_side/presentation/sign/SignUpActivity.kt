@@ -20,6 +20,10 @@ class SignUpActivity : BindingActivity<ActivitySignUpBinding>(R.layout.activity_
     private fun addListeners() {
         binding.btnSignUp.setOnClickListener {
             moveToSignIn()
+            with(DaniSharedPrefernces(this)) {
+                name = binding.etSignUpId.text.toString()
+                mbti = binding.etSignUpMbti.text.toString()
+            }
         }
     }
 
