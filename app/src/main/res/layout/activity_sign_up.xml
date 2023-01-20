@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.danidang.danii_side.SignViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,6 +47,7 @@
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="24dp"
             android:hint="@string/sign_id_hint"
+            android:text="@={viewModel.emailInput}"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +72,7 @@
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="24dp"
             android:hint="@string/sign_pw_hint"
+            android:text="@={viewModel.passwordInput}"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +110,7 @@
             android:layout_marginTop="55dp"
             android:backgroundTint="@color/pink_100"
             android:paddingVertical="10dp"
+            android:enabled="@{viewModel.emailInput.length() >= 6 &amp; viewModel.emailInput.length() &lt;= 10 &amp; viewModel.passwordInput.length() >= 8 &amp; viewModel.passwordInput.length() &lt;=12}"
             android:text="@string/sign_up"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
