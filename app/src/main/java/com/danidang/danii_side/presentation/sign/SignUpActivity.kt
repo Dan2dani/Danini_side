@@ -1,8 +1,9 @@
-package com.danidang.danii_side
+package com.danidang.danii_side.presentation.sign
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
+import com.danidang.danii_side.R
 import com.danidang.danii_side.databinding.ActivitySignUpBinding
 import com.danidang.danii_side.util.binding.BindingActivity
 

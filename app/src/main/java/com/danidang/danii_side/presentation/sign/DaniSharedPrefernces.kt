@@ -1,10 +1,11 @@
-package com.danidang.danii_side
+package com.danidang.danii_side.presentation.sign
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
+import com.danidang.danii_side.BuildConfig
 
 class DaniSharedPrefernces(context: Context) {
     private val masterKey = MasterKey.Builder(context, MasterKey.DEFAULT_MASTER_KEY_ALIAS)
