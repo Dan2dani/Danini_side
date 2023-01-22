@@ -10,4 +10,8 @@
     <string name="sign_up">SIGN UP</string>
     <string name="sign_mbti_label">MBTI</string>
     <string name="sign_mbti_hint">MBTI를 입력하세요.</string>
+
+    <!--  github  -->
+    <string name="repo_item_title">Android Study</string>
+    <string name="repo_item_author">dani43</string>
 </resources>
