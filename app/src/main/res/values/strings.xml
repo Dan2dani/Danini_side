@@ -11,6 +11,10 @@
     <string name="sign_mbti_label">MBTI</string>
     <string name="sign_mbti_hint">MBTI를 입력하세요.</string>
 
+    <!--  github  -->
+    <string name="repo_item_title">Android Study</string>
+    <string name="repo_item_author">dani43</string>
+
     <!--  gallery  -->
     <string name="gallery_title">❤ MY FAVORITES ❤</string>
     <string name="favorite1_title">마이멜로디</string>
