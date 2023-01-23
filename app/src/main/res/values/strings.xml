@@ -14,6 +14,7 @@
     <!--  github  -->
     <string name="repo_item_title">Android Study</string>
     <string name="repo_item_author">dani43</string>
+    <string name="github_header_label">♥ 다니의 레포지토리 ♥</string>
 
     <!--  gallery  -->
     <string name="gallery_title">❤ MY FAVORITES ❤</string>
