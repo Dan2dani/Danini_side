@@ -9,44 +9,41 @@ class GithubRepoActivity :
     BindingActivity<ActivityGithubRepoBinding>(R.layout.activity_github_repo) {
     private val mockRepoList = listOf(
         Repo(
-            R.drawable.img_heart,
             "Android Study",
             "dani43"
         ),
         Repo(
-            R.drawable.img_heart,
             "Exitt",
             "dani43"
         ),
         Repo(
-            R.drawable.img_heart,
             "Keep Go Eat",
             "dani43"
         ),
         Repo(
-            R.drawable.img_heart,
             "BOJ",
             "dani43"
         ),
         Repo(
-            R.drawable.img_heart,
             "IN SOPT",
             "dani43"
         ),
         Repo(
-            R.drawable.img_heart,
             "IN SOPT",
             "dani43"
         ),
         Repo(
-            R.drawable.img_heart,
             "IN SOPT",
             "dani43"
-        ),
+        )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initLayout()
+    }
+
+    fun initLayout() {
         val adapter = RepoAdapter(this)
         binding.rvRepos.adapter = adapter
         adapter.setRepoList(mockRepoList)
