@@ -26,8 +26,18 @@ class DaniSharedPrefernces(context: Context) {
         set(value) = dataStore.edit { putBoolean(IS_LOGIN, value) }
         get() = dataStore.getBoolean(IS_LOGIN, false)
 
+    var name: String?
+        set(value) = dataStore.edit { putString(NAME, value) }
+        get() = dataStore.getString(NAME, "")
+
+    var mbti: String?
+        set(value) = dataStore.edit() { putString(MBTI, value) }
+        get() = dataStore.getString(MBTI, "")
+
     companion object {
         const val FILE_NAME = "DaniSharedPreferences"
         const val IS_LOGIN = "IsLogin"
+        const val NAME = "name"
+        const val MBTI = "mbti"
     }
 }
