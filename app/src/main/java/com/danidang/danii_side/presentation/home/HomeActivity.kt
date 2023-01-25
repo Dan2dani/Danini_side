@@ -11,8 +11,8 @@ class HomeActivity : BindingActivity<ActivityHomeBinding>(R.layout.activity_home
         super.onCreate(savedInstanceState)
         changeFragment(HomeFragment())
         binding.bnvHome.run {
-            setOnItemSelectedListener { item ->
-                when (item.itemId) {
+            setOnItemSelectedListener {
+                when (it.itemId) {
                     R.id.menu_home -> changeFragment(HomeFragment())
                     R.id.menu_gallery -> changeFragment(GalleryFragment())
                     R.id.menu_search -> changeFragment(SearchFragment())

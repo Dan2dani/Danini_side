@@ -15,9 +15,7 @@ class RepoAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHold
         private val binding: ItemRepoBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: Repo) {
-            binding.ivRepo.setImageDrawable(binding.root.context.getDrawable(data.image))
-            binding.tvRepoTitle.text = data.title
-            binding.tvRepoAuthor.text = data.author
+            binding.repo = data
         }
     }
 
