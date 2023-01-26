@@ -1,14 +1,15 @@
 package com.danidang.danii_side.presentation.github
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.danidang.danii_side.databinding.ItemRepoBinding
 import com.danidang.danii_side.databinding.LayoutGithubHeaderBinding
 
-class RepoAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private val inflater by lazy { LayoutInflater.from(context) }
+class RepoAdapter : ListAdapter<Repo, RecyclerView.ViewHolder>(GithubDiffCallback) {
+    private lateinit var inflater: LayoutInflater
     private var repoList: List<Repo> = emptyList()
 
     class RepoViewHolder(
@@ -24,6 +25,9 @@ class RepoAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHold
     ) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        if (!::inflater.isInitialized)
+            inflater = LayoutInflater.from(parent.context)
+
         return when (viewType) {
             HEADER_TYPE -> {
                 val binding = LayoutGithubHeaderBinding.inflate(inflater, parent, false)
@@ -53,11 +57,21 @@ class RepoAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHold
 
     fun setRepoList(repoList: List<Repo>) {
         this.repoList = repoList.toList()
-        notifyDataSetChanged()
     }
 
     companion object {
         const val HEADER_TYPE = 1
         const val REPO_TYPE = 2
+    }
+
+    object GithubDiffCallback : DiffUtil.ItemCallback<Repo>() {
+        override fun areItemsTheSame(oldItem: Repo, newItem: Repo): Boolean {
+            return oldItem == newItem
+        }
+
+        override fun areContentsTheSame(oldItem: Repo, newItem: Repo): Boolean {
+            return oldItem == newItem
+        }
+
     }
 }

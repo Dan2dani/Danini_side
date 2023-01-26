@@ -44,7 +44,7 @@ class GithubRepoActivity :
     }
 
     fun initLayout() {
-        val adapter = RepoAdapter(this)
+        val adapter = RepoAdapter()
         binding.rvRepos.adapter = adapter
         adapter.setRepoList(mockRepoList)
     }
