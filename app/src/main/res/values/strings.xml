@@ -10,4 +10,10 @@
     <string name="sign_up">SIGN UP</string>
     <string name="sign_mbti_label">MBTI</string>
     <string name="sign_mbti_hint">MBTI를 입력하세요.</string>
+
+    <!--  gallery  -->
+    <string name="gallery_title">❤ MY FAVORITES ❤</string>
+    <string name="favorite1_title">마이멜로디</string>
+    <string name="favorite2_title">귀여운 겨우리</string>
+    <string name="favorite3_title">실바니안</string>
 </resources>
