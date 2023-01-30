@@ -10,7 +10,6 @@ import com.danidang.danii_side.databinding.LayoutGithubHeaderBinding
 
 class RepoAdapter : ListAdapter<Repo, RecyclerView.ViewHolder>(GithubDiffCallback) {
     private lateinit var inflater: LayoutInflater
-    private var repoList: List<Repo> = emptyList()
 
     class RepoViewHolder(
         private val binding: ItemRepoBinding
@@ -42,21 +41,17 @@ class RepoAdapter : ListAdapter<Repo, RecyclerView.ViewHolder>(GithubDiffCallbac
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is RepoViewHolder -> holder.onBind(repoList[position - 1])
+            is RepoViewHolder -> holder.onBind(currentList[position - 1])
         }
     }
 
-    override fun getItemCount() = repoList.size + 1
+    override fun getItemCount() = currentList.size + 1
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
             0 -> HEADER_TYPE
             else -> REPO_TYPE
         }
-    }
-
-    fun setRepoList(repoList: List<Repo>) {
-        this.repoList = repoList.toList()
     }
 
     companion object {
@@ -72,6 +67,5 @@ class RepoAdapter : ListAdapter<Repo, RecyclerView.ViewHolder>(GithubDiffCallbac
         override fun areContentsTheSame(oldItem: Repo, newItem: Repo): Boolean {
             return oldItem == newItem
         }
-
     }
 }
